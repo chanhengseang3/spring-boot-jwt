@@ -19,7 +19,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.2.RELEASE</version>
+		<version>2.5.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -33,6 +33,11 @@
 			<!-- JPA Data (Repositories, Entities, Hibernate, etc..) -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 		<dependency>
 			<!-- Starter for using Spring Security -->
@@ -61,7 +66,13 @@
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.20</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<!-- Automated JSON API documentation for API's built with Spring -->
 			<groupId>io.springfox</groupId>
@@ -72,7 +83,7 @@
 			<!-- Generate beautiful documentation from a Swagger-compliant API. -->
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.9.2</version>
+			<version>2.10.0</version>
 		</dependency>
 		<dependency>
 			<!-- JSON Web Token Support -->
@@ -84,7 +95,7 @@
 			<!-- Model Mapper -->
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
-			<version>2.3.5</version>
+			<version>2.4.4</version>
 		</dependency>
 	</dependencies>
 

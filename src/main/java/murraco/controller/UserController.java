@@ -2,8 +2,9 @@ package murraco.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import lombok.RequiredArgsConstructor;
+import murraco.model.AppUser;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,19 +23,16 @@ import io.swagger.annotations.ApiResponses;
 import io.swagger.annotations.Authorization;
 import murraco.dto.UserDataDTO;
 import murraco.dto.UserResponseDTO;
-import murraco.model.User;
 import murraco.service.UserService;
 
 @RestController
 @RequestMapping("/users")
 @Api(tags = "users")
+@RequiredArgsConstructor
 public class UserController {
 
-  @Autowired
-  private UserService userService;
-
-  @Autowired
-  private ModelMapper modelMapper;
+  private final UserService userService;
+  private final ModelMapper modelMapper;
 
   @PostMapping("/signin")
   @ApiOperation(value = "${UserController.signin}")
@@ -54,7 +52,7 @@ public class UserController {
       @ApiResponse(code = 403, message = "Access denied"), //
       @ApiResponse(code = 422, message = "Username is already in use")})
   public String signup(@ApiParam("Signup User") @RequestBody UserDataDTO user) {
-    return userService.signup(modelMapper.map(user, User.class));
+    return userService.signup(modelMapper.map(user, AppUser.class));
   }
 
   @DeleteMapping(value = "/{username}")

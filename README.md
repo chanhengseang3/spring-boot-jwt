@@ -10,13 +10,15 @@
 ![](https://img.shields.io/badge/jwt-✓-blue.svg)
 ![](https://img.shields.io/badge/swagger_2-✓-blue.svg)
 
-You can find a related post for this repository [here](https://medium.com/@xoor/jwt-authentication-service-44658409e12c).
+<!-- ***
 
-***
+<h3 align="center">Please help this repo with a ⭐ or buy me a coffee if you find it useful! :blush:</h3>
 
-<h3 align="center">Please help this repo with a :star: if you find it useful! :blush:</h3>
+*** -->
 
-***
+# If this helped, consider buying me a coffee! ☕️
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/murraco)
 
 # File structure
 
@@ -40,8 +42,8 @@ spring-boot-jwt/
  │       │   └── GlobalExceptionController.java
  │       │
  │       ├── model
- │       │   ├── Role.java
- │       │   └── User.java
+ │       │   ├── AppUserRole.java
+ │       │   └── AppUser.java
  │       │
  │       ├── repository
  │       │   └── UserRepository.java
@@ -397,3 +399,7 @@ $ curl -X GET http://localhost:8080/users/me -H 'Authorization: Bearer <JWT_TOKE
 - Open pull request with improvements
 - Spread the word
 - Reach out to me directly at <mauriurraco@gmail.com>
+
+# Buy me a coffee to show your support!
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/murraco)
